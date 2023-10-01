@@ -72,7 +72,22 @@ require("lazy").setup({
         vim.g.loaded_matchparen = 1
       end,
     },
-    { "jamestthompson3/nvim-remote-containers" },
+
+    -- Keep inside to be notified of updates
+    {
+      "esensar/nvim-dev-container",
+      init = function()
+        require("devcontainer").setup({
+          autocommands = { init = false, clean = false, update = true, },
+          attach_mounts = {
+            always = true,
+            neovim_config = { enabled = true, options = {} },
+            neovim_data = { enabled = true, options = {} },
+            neovim_state = { enabled = true, options = {} },
+          }
+        })
+      end
+    },
 
     -- LSP Support
     { 'williamboman/mason.nvim' },
@@ -86,7 +101,12 @@ require("lazy").setup({
 
     -- LSP Snippets
     { 'L3MON4D3/LuaSnip' },
-    { 'kikito/inspect.lua',                    name = "inspect", build = "mkdir lua && cp *.lua lua" }
+    {
+      'kikito/inspect.lua',
+      name = "inspect",
+      build =
+      "mkdir lua && cp *.lua lua"
+    }
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
