@@ -29,6 +29,8 @@ end, {})
 -- Vim Tree
 local nvim_tree = require("nvim-tree.api")
 vim.keymap.set('n', '<leader>nt', function() nvim_tree.tree.toggle({ path = vim.fn.getcwd() }) end, {})
+-- Chad Tree
+-- vim.keymap.set('n', '<leader>nt', vim.fn.CHADopen, {})
 
 -- Harpoon
 local harpoon_mark = require("harpoon.mark")
@@ -37,13 +39,14 @@ local harpoon_ui = require("harpoon.ui")
 vim.keymap.set('n', '<leader>a', harpoon_mark.add_file)
 vim.keymap.set('n', '<C-e>', harpoon_ui.toggle_quick_menu)
 
-vim.keymap.set('n', '<C-1>', function() harpoon_ui.nav_file(1) end)
-vim.keymap.set('n', '<C-2>', function() harpoon_ui.nav_file(2) end)
-vim.keymap.set('n', '<C-3>', function() harpoon_ui.nav_file(3) end)
-vim.keymap.set('n', '<C-4>', function() harpoon_ui.nav_file(4) end)
+vim.keymap.set('n', '1', function() harpoon_ui.nav_file(1) end)
+vim.keymap.set('n', '2', function() harpoon_ui.nav_file(2) end)
+vim.keymap.set('n', '3', function() harpoon_ui.nav_file(3) end)
+vim.keymap.set('n', '4', function() harpoon_ui.nav_file(4) end)
 
 -- Undotree
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 
 -- Fugitive
 vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
+
