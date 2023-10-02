@@ -17,13 +17,14 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 -- Telescope
 local telescope = require("telescope.builtin")
 vim.keymap.set('n', '<leader>ff', telescope.find_files, {})
+vim.keymap.set('n', '<leader>fa', function() telescope.find_files({ hidden = true }) end, {})
 vim.keymap.set('n', '<leader>fg', telescope.find_files, {})
 vim.keymap.set('n', '<leader>fr', telescope.live_grep, {})
 vim.keymap.set('n', '<leader>fb', telescope.buffers, {})
 vim.keymap.set('n', '<leader>fh', telescope.help_tags, {})
 
 vim.keymap.set('n', '<leader>fs', function()
-	telescope.grep_string({ search = vim.fn.input("Grep > ") })
+  telescope.grep_string({ search = vim.fn.input("Grep > ") })
 end, {})
 
 -- Vim Tree
@@ -49,4 +50,3 @@ vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 
 -- Fugitive
 vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
-

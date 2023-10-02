@@ -10,6 +10,8 @@ nvimux.setup {
 
     { { 't' },              'N',     '<C-\\><C-n>' },
 
+    { { 'n', 'v', 'i', 't' }, 't',   vim.cmd.term },
+
     -- Defaults 
     -- -- Reload global configs
     -- { { 'n', 'v', 'i' },    '<C-r>', '<Cmd>source $MYVIMRC' },

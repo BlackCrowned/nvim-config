@@ -72,6 +72,15 @@ require("lazy").setup({
         vim.g.loaded_matchparen = 1
       end,
     },
+    {
+      "rmagatti/auto-session",
+      config = function()
+        require("auto-session").setup({
+          auto_session_root_dir = vim.fn.getcwd()
+        })
+        -- vim.cmd.SessionRestore()
+      end
+    },
 
     -- Keep inside to be notified of updates
     {

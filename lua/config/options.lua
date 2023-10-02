@@ -28,6 +28,7 @@ vim.g.loaded_netrwPlugin = 1
 
 -- set termguicolors to enable highlight groups
 opt.termguicolors = true
+opt.shell = "bash"
 
 --[[
 opt.autowrite = true -- Enable auto write
