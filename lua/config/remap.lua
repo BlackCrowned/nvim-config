@@ -50,3 +50,4 @@ vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 
 -- Fugitive
 vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
+

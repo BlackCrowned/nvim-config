@@ -81,6 +81,7 @@ require("lazy").setup({
         -- vim.cmd.SessionRestore()
       end
     },
+    { 'nvim-lualine/lualine.nvim',          dependencies = { 'kyazdani42/nvim-web-devicons' } },
 
     -- Keep inside to be notified of updates
     {
@@ -106,7 +107,12 @@ require("lazy").setup({
     { 'VonHeikemen/lsp-zero.nvim' },
     { 'neovim/nvim-lspconfig' },
     { 'hrsh7th/cmp-nvim-lsp' },
+    { 'hrsh7th/cmp-nvim-lua' },
+    { "hrsh7th/cmp-nvim-lsp-signature-help" },
     { 'hrsh7th/nvim-cmp' },
+    { 'kosayoda/nvim-lightbulb' },
+    { 'weilbith/nvim-code-action-menu' },
+    { "folke/neodev.nvim",                  opts = {} },
 
     -- LSP Snippets
     { 'L3MON4D3/LuaSnip' },
@@ -115,7 +121,13 @@ require("lazy").setup({
       name = "inspect",
       build =
       "mkdir lua && cp *.lua lua"
-    }
+    },
+
+    -- DAP Support
+    { 'mfussenegger/nvim-dap' },
+    { 'theHamsta/nvim-dap-virtual-text' },
+    { 'jay-babu/mason-nvim-dap.nvim' },
+    { 'rcarriga/nvim-dap-ui' },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.

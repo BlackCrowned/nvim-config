@@ -1,24 +1,26 @@
 local opt = vim.opt
 
-opt.wrap = false -- Disable line wrap
-opt.number = true -- Print line number
-opt.scrolloff = 8 -- Lines of context
-opt.sidescrolloff = 8 -- Columns of context
-opt.wrap = false -- Disable line wrap
+opt.wrap = false       -- Disable line wrap
+opt.number = true      -- Print line number
+opt.scrolloff = 8      -- Lines of context
+opt.sidescrolloff = 8  -- Columns of context
+opt.wrap = false       -- Disable line wrap
 
-opt.tabstop = 2 -- Number of spaces tabs count for
-opt.shiftround = true -- Round indent
-opt.shiftwidth = 2 -- Size of an indent
+opt.tabstop = 2        -- Number of spaces tabs count for
+opt.shiftround = true  -- Round indent
+opt.shiftwidth = 2     -- Size of an indent
 opt.smartindent = true -- Insert indents automatically
-opt.expandtab = true -- Use spaces instead of tabs
+opt.expandtab = true   -- Use spaces instead of tabs
 
 opt.undolevels = 10000
 opt.swapfile = false
 opt.backup = false
-opt.undodir = vim.fn.stdpath("data") .. "/undodir"
+-- opt.undodir = vim.fn.stdpath("data") .. "/undodir"
+opt.undofile = true
 
 opt.grepprg = "rg --vimgrep"
 opt.clipboard = "unnamedplus" -- Sync with system clipboard
+opt.mouse = "r"
 
 opt.updatetime = 50 -- Save swap file and trigger CursorHold
 
