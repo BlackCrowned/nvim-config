@@ -124,7 +124,8 @@ require("lazy").setup({
     },
 
     -- DAP Support
-    { 'mfussenegger/nvim-dap' },
+    { 'nvim-neotest/nvim-nio' },
+	{ 'mfussenegger/nvim-dap' },
     { 'theHamsta/nvim-dap-virtual-text' },
     { 'jay-babu/mason-nvim-dap.nvim' },
     { 'rcarriga/nvim-dap-ui' },

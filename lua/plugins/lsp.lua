@@ -81,7 +81,7 @@ require("mason-nvim-dap").setup({
   handlers = {},
 })
 require('mason-lspconfig').setup({
-  ensure_installed = { "lua_ls", "svelte", "tsserver", "gofumpt", "gopls", "golangci-lint", "golangci_lint_ls" },
+  ensure_installed = { "lua_ls", "svelte", "ts_ls" },
   handlers = {
     lsp_zero.default_setup,
     --     lua_ls = function()
